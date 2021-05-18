@@ -3,9 +3,14 @@ select * from students where gender = 'female';
 select * from students where gender = 'male' and age between 25 and 40;
 select * from students where gender = 'female' and age > 30 and name like '_a%a';
 select avg(age) from students where gender = 'male';
-select max(age) from students where gender = 'female';
-select * from students limit 3 offset 8 ;
-select count(name) from students;
+select
+    name,
+    max(age)
+from students where gender ='female';
+select * from students order by id desc limit 3 ;
+select count(*) as count, gender
+from students
+group by gender;
 update students set gender = 'female' where name like 'a%';
 update students set name = 'Antonina' where name ='Anton' ;
 update students set age = 10 where gender ='female' and  name not like '%a';
