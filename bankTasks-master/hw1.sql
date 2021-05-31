@@ -8,7 +8,7 @@ select * from client where Education = 'high' order by LastName;
 -- 4. +Виконати сортування у зворотньому порядку над таблицею Заявка і вивести 5 останніх елементів.
 select * from application order by idApplication desc limit 5; 
 -- 5. +Вивести усіх клієнтів, чиє прізвище закінчується на OV чи OVA.
-select * from client where LastName like '%ov' or '%ova';
+select * from client where LastName like '%ov' or LastName like '%ova';
 -- 6. +Вивести клієнтів банку, які обслуговуються київськими відділеннями.
 
 select FirstName, LastName, DepartmentCity from client c
